@@ -30,7 +30,6 @@ print_string:			; Routine: output string in SI to screen
 	jmp .repeat
 
 .done:
-	;int 60h
 	ret
 
 
