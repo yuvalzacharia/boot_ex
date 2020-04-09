@@ -10,7 +10,7 @@ start:
 	mov ds, ax
 
 
-	mov si, text_string	; Put string position into SI
+	mov si, text_string	; Put string position into SIs
 	call print_string	;
 
 	jmp $			; loop
@@ -32,6 +32,6 @@ print_string:			; Routine: output string in SI to screen
 .done:
 	ret
 
-
+	
 	times 510-($-$$) db 0	; padding
-	dw 0xAA55		; boot sector signature
+	dw 0x1bc7		; boot sector signature
